@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Blaster: Speed & Precision!</title>
+    <link rel="stylesheet" href="BoxBlasterStyle.css">
+</head>
+<body>
+    <header>
+        <h1>Box Blaster</h1>
+        <div id="scoreboard">Score: <span id="score">0</span></div>
+        <div id="timer">Time Left: <span id="time-left">30</span>s</div>
+    </header>
+
+    <div class="controls">
+        <button id="startGame" class="btn">Start Game</button>
+        <button id="pauseGame" class="btn">Pause</button>
+        <button id="instructions" class="btn">Instructions</button>
+        <button id="resetGame" class="btn">Reset Game</button>
+        <label for="difficulty" class="difficulty-label">Difficulty:</label>
+        <select id="difficulty" class="difficulty-select">
+            <option value="easy" selected>Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+
+    <div class="game-area" id="gameBoard"></div>
+
+    <!-- Instructions Modal -->
+    <div id="instructionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeInstructions">&times;</span>
+            <h2>How to Play Box Blaster</h2>
+            <p>Hit as many boxes as you can within the time limit!</p>
+            <ul>
+                <li>Blue boxes give you 1 point.</li>
+                <li>Orange boxes give you 10 points and add extra time.</li>
+                <li>Score the target points to win!</li>
+            </ul>
+            <p>Be quick and aim for a high score!</p>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2 id="gameOverMessage">Game Over!</h2>
+            <p>Your final score: <span id="finalScore"></span></p>
+            <button id="playAgain" class="btn">Play Again</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>High Score: <span id="high-score">0</span></p>
+    </footer>
+
+    <script src="BoxBlasterScript.js"></script>
+</body>
+</html>
